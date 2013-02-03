@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+wet-boew.github.com/wet-boew/License-eng.txt / wet-boew.github.com/wet-boew/Licence-fra.txt -->
+<title>jQuery selector as polyfill - Web Experience Toolkit (WET)</title>
+
+<link rel="shortcut icon" href="../dist/theme-gcwu-fegc/images/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--[if lte IE 8]>
+<script src="../dist/js/jquery-ie.min.js"></script>
+<script src="../dist/js/polyfills/html5shiv-min.js"></script>
+<script src="sizzle-polyfill.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="../dist/js/jquery.min.js"></script>
+<!--<![endif]-->
+
+<!-- CustomScriptsCSSStart -->
+<script>
+$(document).ready(function(){
+	alert(document.querySelectorAll('#wb-cont')[0].tagName);
+	alert(document.getElementById('wb-body').querySelector('.test').tagName);
+});
+</script>
+<!-- CustomScriptsCSSEnd -->
+</head>
+
+<body><div id="wb-body">
+<div id="wb-skip">
+<ul id="wb-tphp">
+<li id="wb-skip1"><a href="#wb-cont">Skip to main content</a></li>
+<li id="wb-skip2"><a href="#wb-nav">Skip to footer</a></li>
+</ul>
+</div>
+
+<div id="wb-head"><div id="wb-head-in"><header>
+<!-- HeaderStart -->
+<div id="gcwu-bnr" role="banner"><div id="gcwu-bnr-in">
+<div id="gcwu-wmms"><div id="gcwu-wmms-in"><div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="../dist/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada" /></div></div></div>
+<div id="gcwu-title"><p id="gcwu-title-in"><a href="../index-eng.html">Web Experience Toolkit&#160;(WET)</a></p></div>
+<!-- HeaderEnd -->
+</header></div></div>
+
+<div id="wb-core"><div id="wb-core-in" class="equalize">
+<div id="wb-main" role="main"><div id="wb-main-in">
+<!-- MainContentStart -->
+<h1 id="wb-cont">Working examples</h1>
+<p class="test"></p><p class="test"></p><p class="test"></p>
+<div class="clear"></div>
+<!-- MainContentEnd -->
+</div></div>
+</div></div>
+
+<div id="wb-foot"><div id="wb-foot-in"><footer><h2 id="wb-nav">Footer</h2>
+<!-- FooterStart -->
+<nav role="navigation"><div id="gcwu-sft"><h3>Site footer</h3><div id="gcwu-sft-in">
+<div id="gcwu-tctr">
+</div></section>
+</div></div></nav>
+<!-- FooterEnd -->
+</footer>
+</div></div></div>
+
+<!-- ScriptsStart -->
+<!--[if lte IE 8]>
+<script src="../dist/js/settings-ie.js"></script>
+<script src="../dist/js/pe-ap-ie-min.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="../dist/js/settings.js"></script>
+<script src="../dist/js/pe-ap-min.js"></script>
+<!--<![endif]-->
+<!-- ScriptsEnd -->
+</body>
+</html>
