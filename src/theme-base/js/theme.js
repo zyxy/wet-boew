@@ -80,6 +80,7 @@
 				target,
 				i,
 				len,
+				nodes,
 				node;
 
 			if (wet_boew_theme.menubar.length !== 0 || pe.secnav.length !== 0 || wet_boew_theme.search.length !== 0) {
@@ -112,7 +113,7 @@
 				mb_popup += '<div id="jqm-mb-menu"></div></nav></div></div></div>';
 				bodyAppend += mb_popup;
 				wet_boew_theme.menu = mb_menu;
-				_list += '<li><a data-rel="popup" data-theme="a" data-icon="site-menu" href="#jqm-wb-mb">' + mb_btn_txt + '</a></li>';
+				_list += '<li><a data-rel="popup" data-theme="a" data-icon="bars" href="#jqm-wb-mb">' + mb_btn_txt + '</a></li>';
 			}
 			if (wet_boew_theme.search.length !== 0) {
 				// :: Search box transform lets transform the search box to a popup
@@ -166,8 +167,13 @@
 					if (menu.length !== 0) {
 						menu.append(wet_boew_theme.menu);
 						navbar.find('a[href="#jqm-wb-mb"]').one('click vclick', function () {
+							// Enhance the menu
 							menu.trigger('create');
-							pe.menu.correctmobile(menu);
+							// Fix the bottom corners
+							nodes = menu[0].getElementsByTagName('li');
+							if (node.className.indexOf('ui-corner-bottom') === -1) {
+								node.className += ' ui-corner-bottom';
+							}
 						});
 					}
 				}
